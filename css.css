@@ -1,0 +1,11 @@
+*{
+    font-family: Georgia, serif;
+}
+
+.bg-cslight{
+    background: #0015ff;
+}
+
+.navbar-brand{
+    color: rgb(255, 255, 255);
+}
