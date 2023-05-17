@@ -1,0 +1,93 @@
+*{
+    font-family: 'Aldrich';
+
+}
+
+.f-tillium{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.fs-7{
+    font-size: 4rem;
+}
+
+.fs-8{
+    font-size: 2.2rem;
+}
+
+.fs-9{
+    font-size: 1.6rem;
+}
+
+/* Font COLOR */
+
+.fc-1{
+    color: white;
+}
+.fc-2{
+    color:yellow;
+}
+.fc-3{
+    color: black;
+}
+
+/* Border Color */
+.border-yellow{
+    border: 1px solid yellow;
+}
+
+/* Background */
+.bg-yellow{
+    background: yellow;
+}
+
+.fit{
+    width: fit-content;
+}
+
+body{
+    background:black !important;
+}
+
+.navbar-brand{
+    color: rgb(0, 0, 0)!important;
+    font-family: 'Aldrich'; 
+    font-size: 2rem !important;
+    padding: 0px 1rem;
+    border: 1px solid black;
+    transition:ease 300ms
+}
+
+.navbar-brand:hover{
+    background: black;
+    color: white !important;
+}
+
+div.nav-wrapper a{
+    color: rgb(0, 0, 0)!important;
+    font-size: 1.5rem !important;
+    justify-content: center;
+}
+
+.bg-cslight{
+    background: yellow;
+}
+
+.hover-border {
+    border: 1px solid transparent;
+    display: block;
+    padding: 1px 1px;
+}
+
+.hover-border:hover {
+    border-bottom: 1px solid black;
+}
+
+.highlight{
+    color:yellow;
+}
+
+.highlight:hover{
+    background: yellow;
+    color: black;
+}
