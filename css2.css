@@ -1,6 +1,25 @@
 *{
     font-family: 'Aldrich';
+}
 
+/* Reset */
+.container-fluid{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+/* Width */
+.w-15{
+    width: 15%;
+}
+.w-20{
+    width: 20%;
+}
+.w-30{
+    width: 30%;
+}
+.w-70{
+    width: 70%;
 }
 
 .f-tillium{
@@ -41,12 +60,14 @@
     background: yellow;
 }
 
-.fit{
-    width: fit-content;
+.bg-black{
+    background: black;
 }
 
-body{
-    background:black !important;
+/* Icons */
+
+.fit{
+    width: fit-content;
 }
 
 .navbar-brand{
@@ -64,9 +85,10 @@ body{
 }
 
 div.nav-wrapper a{
-    color: rgb(0, 0, 0)!important;
+    color: white!important;
     font-size: 1.5rem !important;
     justify-content: center;
+    cursor: pointer;
 }
 
 .bg-cslight{
@@ -77,17 +99,135 @@ div.nav-wrapper a{
     border: 1px solid transparent;
     display: block;
     padding: 1px 1px;
+    animation-direction: normal;
+    transition: 500ms;
 }
 
 .hover-border:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid yellow;
 }
 
 .highlight{
     color:yellow;
+    transition: 300ms;
+    background: black;
 }
 
 .highlight:hover{
     background: yellow;
+    color: black;
+}
+
+.wrap{
+    display: inline-block;
+}
+
+.typewriter{
+    width: 100%;
+animation: typing 2s, blink .5s step-end infinite alternate;
+white-space: nowrap;
+overflow: hidden;
+border-right: 3px solid;
+}
+
+@keyframes typing {
+from {
+  width: 0
+}
+}
+  
+@keyframes blink {
+50% {
+  border-color: transparent
+}
+}
+
+.pulse {
+    animation: pulse 0.8s infinite ease-in-out alternate;
+  }
+  @keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+
+.navbar{
+    background: black;
+}
+
+.nav-wrapper a{
+    opacity: 100% !important;
+}
+
+.left{
+    background: yellow;
+}
+
+.right img{
+    border-radius: 0px 20px 20px 0px;
+    height: 25rem;
+}
+
+.fit{
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    background: black;
+    color: white;
+    font-size: 2.2rem;
+}
+
+#about{
+    position: absolute;
+    top: -3.7rem;
+    background: black;
+    color: white;
+    left: 0rem;
+    padding: 10px 10px;
+}
+
+.shadowcs{
+    transition: 500ms;
+}
+
+.shadowcs:hover{
+    /* box-shadow: rgba(121, 121, 121, 0.5) -10px 10px; */
+    transform: scale(1.02);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.intro{
+    background: url(2.png);
+}
+
+/* Section */
+
+.intro, #biodata-section, #experience-section{
+    height: 100vh !important;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+}
+
+#experience-section{
+    background: white;
+    background: url(CSS\ \(1\).png);
+}
+
+#biodata-section{
+    background: url(grey.png);
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+.btn-hover-yellow{
+    transition: 500ms;
+}
+
+.btn-hover-yellow:hover{
+    background:yellow;
     color: black;
 }
