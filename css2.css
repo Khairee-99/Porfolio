@@ -66,10 +66,6 @@
 
 /* Icons */
 
-.fit{
-    width: fit-content;
-}
-
 .navbar-brand{
     color: rgb(0, 0, 0)!important;
     font-family: 'Aldrich'; 
@@ -162,15 +158,25 @@ from {
     background: yellow;
 }
 
-.right img{
-    border-radius: 0px 20px 20px 0px;
-    height: 25rem;
+.img-bg{
+    background-image: url(grey.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 500ms ease-in-out;
+    filter:blur(1px)
 }
 
-.fit{
-    width: 100%;
-    height: 100%;
+.img-bg:hover{
+    animation: slideIn 2s forwards;
+    background-image: url(bestg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter:blur(0px)
 }
+
+
 
 .title{
     background: black;
@@ -230,4 +236,41 @@ from {
 .btn-hover-yellow:hover{
     background:yellow;
     color: black;
+}
+
+.fade-in{
+    opacity: 1;
+}
+
+.fade-out{
+    opacity: 0;
+}
+
+/* Checkbox */
+
+.radio-container{
+    background: black;
+    border-radius: 20px;
+}
+
+.radio{
+    display: none;
+}
+
+#lblradio1{
+    border-radius: 15px 0px 0px 15px;
+    transition: 300ms;
+    animation: forwards;
+    color: white;
+}
+
+#lblradio2{
+    border-radius: 0px 15px 15px 0px;
+    transition: 300ms ease-in-out;
+    color: white;
+}
+
+.radio:checked + .radiolbl{
+    background: white;
+    color: black !important;
 }
