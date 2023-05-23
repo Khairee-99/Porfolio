@@ -38,6 +38,10 @@
     font-size: 1.6rem;
 }
 
+.fs-10{
+    font-size: 1.3rem;
+}
+
 /* Font COLOR */
 
 .fc-1{
@@ -164,7 +168,6 @@ from {
     background-repeat: no-repeat;
     background-position: center;
     transition: 500ms ease-in-out;
-    filter:blur(1px)
 }
 
 .img-bg:hover{
@@ -173,10 +176,11 @@ from {
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter:blur(0px)
 }
 
-
+.clickable{
+    cursor: pointer;
+}
 
 .title{
     background: black;
@@ -273,4 +277,20 @@ from {
 .radio:checked + .radiolbl{
     background: white;
     color: black !important;
+}
+
+.card-wrapper{
+    background: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(42,42,42,1) 100%);
+    border-radius: 20px;
+    color: white;
+}
+
+.visible{
+    opacity: 1;
+    transition: 300ms ease-in-out;
+}
+
+.hide{
+    opacity: 0;
+    display: none;
 }
