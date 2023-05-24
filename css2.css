@@ -283,14 +283,34 @@ from {
     background: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(42,42,42,1) 100%);
     border-radius: 20px;
     color: white;
+    animation:slideIn .5s ease;
 }
 
-.visible{
+@keyframes slideIn  {
+    from{
+        transform: translateX(50px);   
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.active{
     opacity: 1;
     transition: 300ms ease-in-out;
+    display: block;
 }
 
 .hide{
     opacity: 0;
     display: none;
+    transition: 300ms ease-in-out;
+}
+
+.progress-bar{
+    background:linear-gradient(to left, yellow, #d8df80);
+    color: black !important;
+    transition: 200ms ease-in-out;
 }

@@ -10,6 +10,7 @@ const aboutsect = document.getElementById('intro-section');
 const abtbtn = document.querySelector('.about-btn');
 const expbtn = document.querySelector('.exp-btn');
 
+
 aboutnav.addEventListener('click', function() {
     aboutsect.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
@@ -29,3 +30,29 @@ abtbtn.addEventListener('click', function() {
 expbtn.addEventListener('click', function() {
     expsect.scrollIntoView({ behavior:'smooth', block: 'center' });
 });
+
+const radexp = document.getElementById('radio1');
+const radskill = document.getElementById('radio2');
+
+radexp.addEventListener('click', toggle);
+radskill.addEventListener('click', toggle);
+
+function toggle() {
+    let cw1 = document.querySelector('.cw-1');
+    let cw2 = document.querySelector('.cw-2');
+
+    if (radexp.checked) {
+        cw1.classList.remove('hide');
+        cw1.classList.add('active');
+        cw2.classList.remove('active');
+        cw2.classList.add('hide');
+        console.log('active');
+    } else if (radskill.checked) {
+        cw1.classList.remove('active');
+        cw1.classList.add('hide');
+        cw2.classList.remove('hide');
+        cw2.classList.add('active');
+        console.log('pasive');
+    }
+}
+
