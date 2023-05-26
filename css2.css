@@ -188,6 +188,11 @@ from {
     font-size: 2.2rem;
 }
 
+.title-2{
+    font-size: 2.2rem;
+    color: white;
+}
+
 #about{
     position: absolute;
     top: -3.7rem;
@@ -213,7 +218,7 @@ from {
 
 /* Section */
 
-.intro, #biodata-section, #experience-section{
+.intro, #biodata-section, #experience-section, #contact-section{
     height: 100vh !important;
     align-items: center;
     justify-content: center;
@@ -227,6 +232,10 @@ from {
 
 #biodata-section{
     background: url(grey.png);
+}
+
+#contact-section{
+    background:url(contactbg.png);
 }
 
 .justify-text{
@@ -313,4 +322,13 @@ from {
     background:linear-gradient(to left, yellow, #d8df80);
     color: black !important;
     transition: 200ms ease-in-out;
+}
+
+#contact-form{
+    background:grey;
+    opacity: 0.8;
+}
+
+#resume-container{
+    background: rgba(0, 0, 0, 0.85);
 }
