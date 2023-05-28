@@ -66,9 +66,6 @@
             </section>
             <section class="d-flex flex-column p-5 container-fluid justify-content-center " id="experience-section">
                 <div class="d-flex justify-content-center align-items-center">
-                    <!-- <div class="title text-center">
-                        <div>Experience & Skills</div>
-                    </div> -->
                     <div class="d-flex radio-container p-1 gap-2 w-100">
                         <input class="form-check-input radio" type="radio" value="" id="radio1" checked name="exp-year">
                         <label class="form-check-label radiolbl p-2 clickable" id="lblradio1" for="radio1">
@@ -123,23 +120,32 @@
                     </div>
                 </div>
             </section>
-            <section class="container-fluid d-flex" id="contact-section">
-                <div class="d-flex justify-content-center">
-                    <div class="d-flex flex-column border-yellow p-4 " id="resume-container">
-                        <div class="fc-1 title-2 p-4">INTERESTED? <span class="highlight">LET'S GET IN TOUCH!</span></div>
-                        <div class="fs-9">Any suggestion would be appreciated</div>
-                        <div class="mt-5 fc-1 fs-10 bg-black"><i class="fa-brands fa-github pe-2"></i>https://github.com/Khairee-99</div>
-                        <div class="fc-1 fs-10 p-4 bg-black"><i class="fa-solid fa-at pe-2"></i>m.khairee99@gmail.com</div>
+            <section class="container-fluid d-flex p-5" id="contact-section">
+               <div class="w-75 d-flex resume-bg">
+                    <div class="w-50 border-yellow p-5 d-flex justify-content-center align-items-center flex-column" id="resume-wrap">
+                        <div class="resume-title-wrap d-flex justify-content-center align-items-center flex-column">
+                            <div id="resume-title">Interested? Download My</div>
+                            <div class="fs-10 highlight border-yellow p-2 f-tillium mt-4"><a>Resume</a></div>
+                        </div>
                     </div>
-                    <div class="d-flex border-yellow justify-content-center align-items-center p-4">
-                        <div class="">CONTACT ME!</div>
-                        <form action="" id="contact-form" class="">
-                            <label  for="email">Email</label>
-                            <input type="text" id="email" placeholder="">
-                            <label for="email"></label>
+                    <div class="w-50 border-yellow p-5" id="contact-wrap">
+                        <div class="pb-5" id="resume-title">Contact Me!</div>
+                        <form action="">
+                            <div class="position-relative pb-4">
+                                <label for="name" class="fc-1">Enter Your Name</label>
+                                <input type="text" class="" id="name" name="name">
+                            </div>
+                            <div class="position-relative pb-4">
+                                <label for="email" class="fc-1">Enter Your Email</label>
+                                <input type="email" class="" id="email" name="email">
+                            </div>
+                            <div class="position-relative">
+                                <label for="message" class=" fc-1">Message</label>
+                                <textarea class="form-control" id="message" name="message"></textarea>
+                            </div>
                         </form>
                     </div>
-                </div>
+               </div>
             </section>
         </section>
     </div>

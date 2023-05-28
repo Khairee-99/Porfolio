@@ -7,6 +7,9 @@ const expsect = document.getElementById('experience-section');
 const aboutnav = document.querySelector('.nav-aboutme');
 const aboutsect = document.getElementById('intro-section');
 
+const contactnav = document.querySelector('.nav-contact'); 
+const contactsect = document.getElementById('contact-section');   
+
 const abtbtn = document.querySelector('.about-btn');
 const expbtn = document.querySelector('.exp-btn');
 
@@ -21,6 +24,10 @@ biodatanav.addEventListener('click', function() {
 
 expnav.addEventListener('click', function() {
     expsect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+contactnav.addEventListener('click', function() {
+    contactsect.scrollIntoView({ behavior:'smooth', block: 'center' });
 });
 
 abtbtn.addEventListener('click', function() {
@@ -46,13 +53,11 @@ function toggle() {
         cw1.classList.add('active');
         cw2.classList.remove('active');
         cw2.classList.add('hide');
-        console.log('active');
     } else if (radskill.checked) {
         cw1.classList.remove('active');
         cw1.classList.add('hide');
         cw2.classList.remove('hide');
         cw2.classList.add('active');
-        console.log('pasive');
     }
 }
 
