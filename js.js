@@ -61,3 +61,28 @@ function toggle() {
     }
 }
 
+const inputs = [
+    {
+      input: document.getElementById('name'),
+      label: document.getElementById('namelbl')
+    },
+    {
+      input: document.getElementById('email'),
+      label: document.getElementById('emaillbl')
+    },
+    {
+      input: document.getElementById('message'),
+      label: document.getElementById('msglbl')
+    }
+  ];
+  
+  inputs.forEach(({ input, label }) => {
+    input.addEventListener('input', function() {
+      if (input === document.activeElement || input.value.trim() !== '' || input.value.length !== 0) {
+        label.classList.add('moveUp');
+        label.classList.remove('typewriter');
+      } else {
+        label.classList.remove('moveUp');
+      }
+    });
+  });
