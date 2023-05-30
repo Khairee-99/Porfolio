@@ -61,6 +61,33 @@ function toggle() {
     }
 }
 
+// const inputs = [
+//     {
+//       input: document.getElementById('name'),
+//       label: document.getElementById('namelbl')
+//     },
+//     {
+//       input: document.getElementById('email'),
+//       label: document.getElementById('emaillbl')
+//     },
+//     {
+//       input: document.getElementById('message'),
+//       label: document.getElementById('msglbl')
+//     }
+//   ];
+  
+//   inputs.forEach(({ input, label }) => {
+//     input.addEventListener('input', function() {
+//       if (input === document.activeElement || input.value.trim() !== '' || input.value.length !== 0) {
+//         label.classList.add('moveUp');
+//         label.classList.remove('typewriter');
+//         console.log(document.activeElement);
+//       } else {
+//         label.classList.remove('moveUp');
+//       }
+//     });
+//   });
+
 const inputs = [
     {
       input: document.getElementById('name'),
@@ -76,13 +103,54 @@ const inputs = [
     }
   ];
   
+  const spanAnim = document.getElementById('lblspan');
+
   inputs.forEach(({ input, label }) => {
-    input.addEventListener('input', function() {
-      if (input === document.activeElement || input.value.trim() !== '' || input.value.length !== 0) {
+    input.addEventListener('input', handleInput);
+    input.addEventListener('blur', handleBlur);
+    function handleInput() {
+      if (input.value.trim() !== '') {
         label.classList.add('moveUp');
+        spanAnim.classList.add('dissapear');
         label.classList.remove('typewriter');
       } else {
         label.classList.remove('moveUp');
+        label.classList.add('typewriter');
       }
-    });
+    }
+  
+    function handleBlur() {
+      if (input.value.trim() === '') {
+        label.classList.remove('moveUp');
+      }
+    }
   });
+  
+  document.addEventListener('click', function(event) {
+    const clickedElement = event.target;
+    if (!isInputOrLabel(clickedElement)) {
+      inputs.forEach(({ input }) => input.blur());
+    }
+  });
+  
+  function isInputOrLabel(element) {
+    return element.tagName === 'INPUT' || element.tagName === 'LABEL';
+  }
+  
+
+  // Google Form
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzZtglFBz-WQOhCj5Iamgi36NMaNGAvkCq2tGnO-hY18D_XQ-WG0hFDvVEmTNCc4O8-Cw/exec'
+			const form = document.forms['formName']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+
+
+  
+  
