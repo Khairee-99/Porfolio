@@ -373,7 +373,7 @@ input:focus{
     position: absolute;
     top:6px;
     left: 5px;
-    width: 35%;
+    width: 34%;
     transition: 500ms ease;
     padding: 0px 5px 0px 5px;
 }

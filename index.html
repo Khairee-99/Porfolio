@@ -130,18 +130,18 @@
                     </div>
                     <div class="w-50 border-yellow p-5" id="contact-wrap">
                         <div class="pb-5" id="resume-title">Contact Me!</div>
-                        <form action="https://script.google.com/macros/s/AKfycbzZtglFBz-WQOhCj5Iamgi36NMaNGAvkCq2tGnO-hY18D_XQ-WG0hFDvVEmTNCc4O8-Cw/exec" method="post" autocomplete="off">
+                        <form action="mail.php" method="post" autocomplete="off">
                             <div class="position-relative pb-5">
                                 <label for="name" class="fc-1 labels typewriter d-flex" id="namelbl"><div id="lblspan">Enter Your</div><div class="ps-1">Name</div></label>
-                                <input type="text" class="" id="name" name="name" autocomplete=none>
+                                <input type="text" class="" id="name" name="name" autocomplete=none required>
                             </div>
                             <div class="position-relative pb-5">
                                 <label for="email" class="fc-1 labels typewriter" id="emaillbl">Enter Your Email</label>
-                                <input type="email" class="" id="email" name="email" autocomplete=none>
+                                <input type="email" class="" id="email" name="email" autocomplete=none required>
                             </div>
                             <div class="position-relative">
                                 <label for="message" class=" fc-1 labels typewriter " id="msglbl">Write a Message</label>
-                                <input type="text" class="" id="message" name="message" autocomplete=none>
+                                <input type="text" class="" id="message" name="message" autocomplete=none required>
                                 <!-- <textarea class="" id="message" name="message"></textarea> -->
                             </div>
                             <input class="button btn-primary " type="submit" value="Send Message">
