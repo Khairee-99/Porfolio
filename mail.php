@@ -12,6 +12,8 @@ $recipient = "m.khairee99@gmail.com";
 $mailheader = "From: " .$name."<" .$email.">\r\n";
 
 mail($recipient, $subject, $message, $mailheader)
-or die("Couldn't send")
+or die("Couldn't send");
 
+
+echo"message sent";
 ?>
