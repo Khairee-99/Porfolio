@@ -23,7 +23,7 @@
 }
 
 .f-tillium{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif !important;
 }
 
 .fs-7{
@@ -40,6 +40,28 @@
 
 .fs-10{
     font-size: 1.3rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .fs-7, #resume-title{
+        font-size: 2rem;
+    }
+    
+    .fs-8{
+        font-size: 1.2rem;
+    }
+    
+    .fs-9{
+        font-size: 0.8rem;
+    }
+    
+    .fs-10{
+        font-size: 0.7rem;
+    }
+
 }
 
 /* Font COLOR */
@@ -108,14 +130,14 @@ div.nav-wrapper a{
 }
 
 .highlight{
-    color:yellow;
+    color:yellow !important;
     transition: 300ms;
     background: black;
 }
 
 .highlight:hover{
-    background: yellow;
-    color: black;
+    background: yellow !important;
+    color: black !important;
 }
 
 .wrap{
@@ -215,6 +237,15 @@ from {
 .intro{
     background: url(2.png);
 }
+
+
+.body{
+    width: fit-content;
+    height: 100vh;
+    scroll-snap-type:y mandatory;
+    overflow-y: scroll;
+}
+
 
 /* Section */
 
@@ -369,6 +400,11 @@ input:focus{
     border-top: 1px solid rgb(36, 36, 36) !important;
 }
 
+input[type="text"]:focus, input[type="email"]:focus{
+    background: rgb(31, 31, 31) !important;
+}
+
+
 .labels{
     position: absolute;
     top:6px;
@@ -381,5 +417,5 @@ input:focus{
 .moveUp{
     transform: translate(-5px, -30px);
     width: fit-content;
-    border-bottom: 1px solid rgba(255, 255, 0, 0.1) !important;
+    border-bottom: 2px solid rgba(255, 255, 0, 0.1) !important;
 }
