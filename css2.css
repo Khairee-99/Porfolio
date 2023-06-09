@@ -31,11 +31,11 @@
 }
 
 .fs-8{
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .fs-9{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .fs-10{
@@ -43,15 +43,15 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
 
-    .fs-7, #resume-title{
+    .fs-7{
         font-size: 2rem;
     }
     
-    .fs-8{
-        font-size: 1.2rem;
+    .fs-8, #resume-title{
+        font-size: 1rem;
     }
     
     .fs-9{
@@ -63,6 +63,38 @@
     }
 
 }
+
+@media (max-width: 576px) {
+    .fs-7 {
+        font-size: 1.6rem;
+    }
+    
+    .fs-8{
+        font-size: 1rem;
+    }
+    
+    .fs-9{
+        font-size: 0.8rem;
+    }
+    
+    .fs-10{
+        font-size: 0.7rem;
+    }
+
+    #about{
+        position: absolute;
+        top: -2.5rem !important;
+        background: black;
+        color: white;
+        left: 0rem;
+        padding: 10px 10px;
+    }
+
+    .labels{
+        width: 62% !important;
+    }
+}
+
 
 /* Font COLOR */
 
@@ -238,9 +270,6 @@ from {
     background: url(2.png);
 }
 
-body{
-
-}
 .body{
     width: 100vw;
     height: 100vh;
@@ -386,10 +415,6 @@ body{
     background: black;
 }
 
-#resume-title{
-    font-size: 1.6rem;
-    color: white;
-}
 
 input, textarea{
     background:transparent !important;
@@ -418,7 +443,7 @@ input[type="text"]:focus, input[type="email"]:focus{
     position: absolute;
     top:6px;
     left: 5px;
-    width: 34%;
+    width: 21%;
     transition: 500ms ease;
     padding: 0px 5px 0px 5px;
 }
@@ -427,4 +452,8 @@ input[type="text"]:focus, input[type="email"]:focus{
     transform: translate(-5px, -30px);
     width: fit-content;
     border-bottom: 2px solid rgba(255, 255, 0, 0.1) !important;
+}
+
+.resume-bg{
+    width: 100vw !important;
 }
