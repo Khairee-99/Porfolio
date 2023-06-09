@@ -108,7 +108,6 @@
 
 div.nav-wrapper a{
     color: white!important;
-    font-size: 1.5rem !important;
     justify-content: center;
     cursor: pointer;
 }
@@ -174,6 +173,7 @@ from {
 
 .navbar{
     background: black;
+    width: 100vw;
 }
 
 .nav-wrapper a{
@@ -238,14 +238,23 @@ from {
     background: url(2.png);
 }
 
+body{
 
+}
 .body{
-    width: fit-content;
+    width: 100vw;
     height: 100vh;
     scroll-snap-type:y mandatory;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0; /* Adjust the width as needed */
+    background-color: #F5F5F5; /* Set the background color to match your container */
+  }
 
 /* Section */
 
@@ -253,7 +262,7 @@ from {
     height: 100vh !important;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 #experience-section{
