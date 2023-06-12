@@ -38,6 +38,56 @@ expbtn.addEventListener('click', function() {
     expsect.scrollIntoView({ behavior:'smooth', block: 'center' });
 });
 
+const inputs = [
+  {
+    input: document.getElementById('name'),
+    label: document.getElementById('namelbl')
+  },
+  {
+    input: document.getElementById('email'),
+    label: document.getElementById('emaillbl')
+  },
+  {
+    input: document.getElementById('message'),
+    label: document.getElementById('msglbl')
+  }
+];
+
+const spanAnim = document.getElementById('lblspan');
+
+inputs.forEach(({ input, label }) => {
+  input.addEventListener('input', handleInput);
+  input.addEventListener('blur', handleBlur);
+  function handleInput() {
+    if (input.value.trim() !== '') {
+      label.classList.add('moveUp');
+      spanAnim.classList.add('dissapear');
+      label.classList.remove('typewriter');
+    } else {
+      label.classList.remove('moveUp');
+      label.classList.add('typewriter');
+    }
+  }
+
+  function handleBlur() {
+    if (input.value.trim() === '') {
+      label.classList.remove('moveUp');
+    }
+  }
+});
+
+document.addEventListener('click', function(event) {
+  const clickedElement = event.target;
+  if (!isInputOrLabel(clickedElement)) {
+    inputs.forEach(({ input }) => input.blur());
+  }
+});
+
+function isInputOrLabel(element) {
+  return element.tagName === 'INPUT' || element.tagName === 'LABEL';
+}
+
+
 const radexp = document.getElementById('radio1');
 const radskill = document.getElementById('radio2');
 
@@ -61,54 +111,7 @@ function toggle() {
     }
 }
 
-const inputs = [
-    {
-      input: document.getElementById('name'),
-      label: document.getElementById('namelbl')
-    },
-    {
-      input: document.getElementById('email'),
-      label: document.getElementById('emaillbl')
-    },
-    {
-      input: document.getElementById('message'),
-      label: document.getElementById('msglbl')
-    }
-  ];
-  
-  const spanAnim = document.getElementById('lblspan');
 
-  inputs.forEach(({ input, label }) => {
-    input.addEventListener('input', handleInput);
-    input.addEventListener('blur', handleBlur);
-    function handleInput() {
-      if (input.value.trim() !== '') {
-        label.classList.add('moveUp');
-        spanAnim.classList.add('dissapear');
-        label.classList.remove('typewriter');
-      } else {
-        label.classList.remove('moveUp');
-        label.classList.add('typewriter');
-      }
-    }
-  
-    function handleBlur() {
-      if (input.value.trim() === '') {
-        label.classList.remove('moveUp');
-      }
-    }
-  });
-  
-  document.addEventListener('click', function(event) {
-    const clickedElement = event.target;
-    if (!isInputOrLabel(clickedElement)) {
-      inputs.forEach(({ input }) => input.blur());
-    }
-  });
-  
-  function isInputOrLabel(element) {
-    return element.tagName === 'INPUT' || element.tagName === 'LABEL';
-  }
   
 
 

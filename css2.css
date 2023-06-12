@@ -22,10 +22,6 @@
     width: 70%;
 }
 
-.f-tillium{
-    font-family: 'Titillium Web', sans-serif !important;
-}
-
 .fs-7{
     font-size: 4rem;
 }
@@ -110,6 +106,10 @@
 }
 .fc-3{
     color: black;
+}
+
+.fc-4{
+    color: rgb(124, 124, 124);
 }
 
 /* Border Color */
@@ -364,10 +364,11 @@ from {
 }
 
 .card-wrapper{
-    background: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(42,42,42,1) 100%);
+    background: black;
     border-radius: 20px;
     color: white;
     animation:slideIn .5s ease;
+    width: 100%;
 }
 
 @keyframes slideIn  {
@@ -406,7 +407,6 @@ from {
 
 #resume-wrap{
     backdrop-filter: blur(5px);
-    /* background: transparent; */
     transition: 500ms;
 }
 
@@ -447,7 +447,7 @@ input[type="text"]:focus, input[type="email"]:focus{
     position: absolute;
     top:6px;
     left: 5px;
-    width: 28%;
+    width: 21%;
     transition: 500ms ease;
     padding: 0px 5px 0px 5px;
 }
@@ -462,3 +462,50 @@ input[type="text"]:focus, input[type="email"]:focus{
     width: 100vw !important;
 }
 
+.projects {
+    width: 60%;
+}
+
+.battmen img{
+    border-top-right-radius: 15px;
+}
+
+.bateriku img{
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid black;
+}
+
+.battmen img, .bateriku img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:965px) {
+    .card-cst{
+        width: 100% !important;
+    }
+
+    .card-wrapper{
+        flex-direction: column;
+    }
+
+    .projects {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
+    .battmen img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    
+    .bateriku img{
+        border-bottom-right-radius: 15px;
+        border-top: 1px solid black;
+    }
+    
+    .battmen img, .bateriku img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
