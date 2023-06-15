@@ -23,45 +23,55 @@
 }
 
 .fs-7{
-    font-size: 4rem;
+    font-size: 5vw;
 }
 
 .fs-8{
-    font-size: 2rem;
+    font-size: 2vw;
 }
 
 .fs-9{
-    font-size: 1.4rem;
+    font-size: 1.4vw;
 }
 
 .fs-10{
-    font-size: 1.2rem;
+    font-size: 1.2vw;
 }
 
+.mt-5cst{
+    margin-top: 3rem;
+}
 
 @media (max-width: 768px) {
 
-
+    .mt-5cst{
+        margin-top: 10px;
+    }
+    
     .fs-7{
-        font-size: 3rem;
+        font-size: 6vw;
     }
     
     .fs-8, #resume-title{
-        font-size: 1.5rem;
+        font-size: 4vw;
     }
     
     .fs-9{
-        font-size: 1.1rem;
+        font-size: 3.5vw;
     }
     
     .fs-10{
-        font-size: 1rem;
+        font-size: 3vw;
+    }
+
+    .fa-3x{
+        font-size: 5vw;
     }
 
 }
 
 @media (max-width: 576px) {
-    .fs-7 {
+    /* .fs-7 {
         font-size: 1.6rem;
     }
     
@@ -75,14 +85,12 @@
     
     .fs-10{
         font-size: 0.7rem;
-    }
+    } */
 
     #about{
-        position: absolute;
-        top: -2.5rem !important;
+        border: 1px solid red;
         background: black;
         color: white;
-        left: 0rem;
         padding: 10px 10px;
     }
 
@@ -109,7 +117,7 @@
 }
 
 .fc-4{
-    color: rgb(124, 124, 124);
+    color: rgb(210, 210, 210);
 }
 
 /* Border Color */
@@ -127,20 +135,6 @@
 }
 
 /* Icons */
-
-.navbar-brand{
-    color: rgb(0, 0, 0)!important;
-    font-family: 'Aldrich'; 
-    font-size: 2rem !important;
-    padding: 0px 1rem;
-    border: 1px solid black;
-    transition:ease 300ms
-}
-
-.navbar-brand:hover{
-    background: black;
-    color: white !important;
-}
 
 div.nav-wrapper a{
     color: white!important;
@@ -221,8 +215,9 @@ from {
 }
 
 .img-bg{
-    background-image: url(grey.jpg);
-    background-size:cover;
+    /* background-image: url(grey.jpg); */
+    background: url(bestg.webp);
+    background-size:50vw;
     background-repeat: no-repeat;
     background-position: center;
     transition: 500ms ease-in-out;
@@ -252,13 +247,12 @@ from {
 }
 
 #about{
-    position: absolute;
-    top: -3.5rem;
+    width: fit-content;
     background: black;
     color: white;
-    left: 0rem;
     padding: 10px 10px;
 }
+
 
 .shadowcs{
     transition: 500ms;
@@ -270,8 +264,104 @@ from {
     border-radius: 0px 20px 20px 0px;
 }
 
+.exp-title{
+    border-bottom: 5px solid yellow;
+    width: fit-content;
+    padding: 0px 0px;
+}
+
+.knowme-col{
+    color: white;
+    border: 1px solid transparent;
+    /* background: #1d1d1d31; */
+    border-radius: 15px 0px 0px 15px;
+    backdrop-filter: blur(15px);
+    opacity: 0.9;
+    transition: 300ms ease-in;
+    /* box-shadow: 0px 0px 30px 0px #80808017; */
+}
+
+.skills-col{
+    border:1px transparent #80808017;
+    border-radius: 0px 15px 15px 0px;
+    /* box-shadow: 0px 0px 10px 0px #80808017; */
+}
+
 .intro{
-    background: url(2.png);
+    /* background: url(2.png);       */
+    background:url(bestg.webp);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-color: black;
+    backdrop-filter: blur;
+    position: relative;
+}
+
+.introwrap{
+    width:800px;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    /* border: 1px solid yellow; */
+    padding: 20px 20px;
+    border-radius: 15px;
+    transition: 300ms ease-in-out;
+}
+
+.explore-btn{
+    margin-top: 30px;
+}
+
+.contactbtn{
+    margin-top: 20px;
+}
+
+.explore-btn, .contactbtn, .experiencebtn, .connectbtn {
+    width: fit-content;
+    outline: none;
+    border: 1px solid yellow;
+    padding: 10px 10px;
+    transition: 200ms ease-in;
+    /* background: black; */
+    color: yellow;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.explore-btn::before, .contactbtn::before, .experiencebtn::before, .connectbtn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background: yellow;
+    transition: 300ms ease-in-out;
+}
+
+.explore-btn:hover, .contactbtn:hover, .experiencebtn:hover, .connectbtn:hover{
+    color: black;
+}
+
+.explore-btn:hover::before, .contactbtn:hover::before, .experiencebtn:hover::before, .connectbtn:hover::before{
+    width: 100%;
+}
+
+.intro-msg{
+    background: rgba(0, 0, 0, 0.226);
+    /* border: 0.5px solid yellow; */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    margin-top: 10px;
+}
+
+.sticky-top{
+    border-bottom: 0.1px solid rgba(255, 255, 0, 0.432) ;
 }
 
 .body{
@@ -291,26 +381,26 @@ from {
 
 /* Section */
 
+
+
 .intro, #biodata-section, #experience-section, #contact-section{
     height: 100vh !important;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     scroll-snap-align: start;
 }
 
 #experience-section{
-    background: white;
-    background: url(CSS\ \(1\).png);
+    background: black;
 }
 
 #biodata-section{
-    background: url(grey.png);
+    /* background: url(grey.png); */
+    background: black;
 }
 
 #contact-section{
     background:url(contactbg.png);
-    /* background: url(stars.jpg); */
-    background-size: cover;
 }
 
 .justify-text{
@@ -394,10 +484,16 @@ from {
     transition: 300ms ease-in-out;
 }
 
+.progress{
+    border-radius: 0px !important;
+    height: 5px !important;
+}
+
 .progress-bar{
-    background:linear-gradient(to left, yellow, #d8df80);
-    color: black !important;
-    transition: 200ms ease-in-out;
+    border: 1px solid yellow !important;
+    background:yellow !important;
+    transition: 200ms ease-in-out !important;
+    border-radius:0px !important;
 }
 
 #contact-form{
@@ -415,7 +511,6 @@ from {
 }
 
 #contact-wrap{
-    /* background:linear-gradient(to left, rgb(0, 0, 0, 0.897),rgb(5, 5, 5)); */
     background: black;
 }
 
@@ -466,21 +561,26 @@ input[type="text"]:focus, input[type="email"]:focus{
     width: 60%;
 }
 
-.battmen img{
-    border-top-right-radius: 15px;
-}
-
-.bateriku img{
-    border-bottom-right-radius: 15px;
-    border-top: 1px solid black;
-}
-
 .battmen img, .bateriku img{
+    border-radius: 10px 10px;
     width: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 @media (max-width:965px) {
+    .introwrap{
+        width:90vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 45%;
+        bottom: 0;
+        margin: auto;
+        padding: 20px 20px;
+        border-radius: 15px;
+        transition: 300ms ease-in-out;
+    }
+
     .card-cst{
         width: 100% !important;
     }
@@ -494,13 +594,8 @@ input[type="text"]:focus, input[type="email"]:focus{
         flex-direction: column;
         width: 100%;
     }
-    .battmen img{
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
     
     .bateriku img{
-        border-bottom-right-radius: 15px;
         border-top: 1px solid black;
     }
     
@@ -508,4 +603,72 @@ input[type="text"]:focus, input[type="email"]:focus{
         width: 100%;
         object-fit: cover;
     }
+}
+
+.fa-brands{
+    background: black;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.tools-wrap > i:hover{
+    -webkit-text-stroke-color: yellow;
+}
+
+.skills-prog:hover > :nth-child(1){
+    -webkit-text-stroke-color: yellow;
+}
+
+.skills-prog:hover > :nth-child(2), .skills-prog:hover > :nth-child(3){
+    color: yellow;
+}
+
+.img-card{
+    position: relative;
+    padding: 0px 0px !important;
+    /* box-shadow: 0px 0px 10px 0px #80808017; */
+    border:1px solid #80808017;
+    border-radius: 15px;
+    transition: 300ms ease-in-out;
+}
+
+.img-card:hover{
+    box-shadow: 0px 0px 10px 0px #80808017;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.3);
+    top:0%;
+    transition: 400ms ease-in;
+}
+
+.img-card:hover > .overlay{
+    opacity: 0;
+}
+
+.overlay > .fs-8{
+    opacity: 1;
+}
+
+.khaipic{
+    height: 100%;
+    width: 100%;
+    object-fit:fill;
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+    border-radius: 15px;
+}
+
+.biowrap{
+    width: 75vw !important;
+    border-bottom: 1px solid 80808017 ;
+}
+
+
+.bateriku-link{
+    text-decoration: none;
+    color: white;
 }
