@@ -37,7 +37,7 @@
                 <div class="d-flex flex-column my-5 introwrap">
                     <div class="wrap">
                         <div class=""><span class="fc-4">HI, I'M</span> <span class="fw-bold">KHAIREE</span></div>
-                        <div class="yellow-box fs-8">A <span class="fc-2">Web Developer</span></div>
+                        <div class="yellow-box fs-8"><span class="fc-2">WEB DEVELOPER</span></div>
                     </div>
                     <div class="fs-9 justify-text intro-msg fc-4">I'm a passionate fresh graduate eager to embark on my
                         journey as a web developer in the exciting world of web development.</div>
@@ -47,10 +47,10 @@
             </section>
             <section class="container-fluid d-flex flex-column fc-1 justify-content-center p-4" id="biodata-section">
                 <div class="fs-8 fw-bold row mb-5" id="about">About Me</div>
-                <div class="row biowrap">
+                <div class="row biowrap gap-3">
                     <div class="col-sm fs-9 knowme-col d-flex flex-column">
                         <div class="mb-3">GET TO KNOW ME!</div>
-                        <div class="fs-10">
+                        <div class="fs-10 fc-4">
                             <div class="justify-text">Hi, I am Muhammad Khairee bin Mohd Nazmi. A 24 years old who
                                 recently completed my final semester as a Front-End Web Developer intern at Bateriku.
                             </div>
@@ -179,16 +179,42 @@
                     </div>
                 </div>
             </section>
-            <section class="container-fluid d-flex py-5 px-4" id="contact-section">
-                <div class="w-100 d-flex resume-bg justify-content-center">
-                    <div class="border-yellow p-4 d-flex justify-content-center align-items-center flex-column w-50"
-                        id="resume-wrap">
-                        <div class="resume-title-wrap d-flex justify-content-center align-items-center flex-column">
-                            <div class="fs-8 align-middle fc-1" id="resume-title ">Ready to take the next step?</div>
-                            <div class="fs-10 align-middle fc-1"> Download My</div>
-                            <div class="fs-10 highlight border-yellow p-2 mt-4 clickable"><a>Resume</a></div>
+            <section class="container-fluid" id="contact-section">
+                <div class="row w-100 h-100 m-0">
+                    <div class="col resume d-flex justify-content-center align-items-center">
+                        <div class="fc-4 fs-8 fw-bold">READY TO <span class="fc-1">TAKE</span> THE NEXT STEP?</div>
+                    </div>
+                    <div class="col contact d-flexr">
+                        <div class="fc-2">
+                            <div class="w-100 d-flex resume-bg ">
+                            <div class="border-yellow p-4 w-100" id="contact-wrap">
+                                <div class="pb-5 fs-8 fc-1" id="resume-title">Contact Me!</div>
+                                <form action="mail.php" method="POST" autocomplete="off">
+                                    <div class="position-relative pb-5">
+                                        <label for="name" class="fc-1 labels typewriter d-flex fs-10" id="namelbl">
+                                            <div id="lblspan">Enter Your</div>
+                                            <div class="ps-1">Name</div>
+                                        </label>
+                                        <input type="text" class="" id="name" name="name" required>
+                                    </div>
+                                    <div class="position-relative pb-5">
+                                        <label for="email" class="fc-1 labels typewriter fs-10" id="emaillbl">Enter Your
+                                            Email</label>
+                                        <input type="email" class="" id="email" name="email" required>
+                                    </div>
+                                    <div class="position-relative">
+                                        <label for="message" class=" fc-1 labels typewriter fs-10" id="msglbl">Write a
+                                            Message</label>
+                                        <input type="text" class="" id="message" name="message" autocomplete=none required>
+                                    </div>
+                                    <input class="fs-10 highlight border-yellow p-2 mt-4" type="submit" value="Send Message">
+                                </form>
+                            </div>
+                        </div>
                         </div>
                     </div>
+                </div>
+                <div class="w-100 d-flex resume-bg justify-content-center">
                     <div class="border-yellow p-4 w-50" id="contact-wrap">
                         <div class="pb-5 fs-8 fc-1" id="resume-title">Contact Me!</div>
                         <form action="mail.php" method="POST" autocomplete="off">

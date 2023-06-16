@@ -88,7 +88,6 @@
     } */
 
     #about{
-        background: black;
         color: white;
         padding: 10px 10px;
         margin-bottom: 10px !important;
@@ -261,8 +260,8 @@ from {
 }
 
 #about{
+    letter-spacing: 5px;
     width: fit-content;
-    background: black;
     color: white;
     padding: 10px 10px;
 }
@@ -302,7 +301,7 @@ from {
 }
 
 .intro{
-    /* background: url(2.png);       */
+    background-color: #202030;
     background:url(bestg.webp);
     background-size:contain;
     background-repeat: no-repeat;
@@ -329,6 +328,10 @@ from {
 
 .contactbtn{
     margin-top: 20px;
+    border-radius: 30px;
+}
+
+.connectbtn{
 }
 
 .explore-btn, .contactbtn, .experiencebtn, .connectbtn {
@@ -404,17 +407,21 @@ from {
     scroll-snap-align: start;
 }
 
+.contact{
+    background: black;
+}
+
 #experience-section{
     background: black;
 }
 
 #biodata-section{
     /* background: url(grey.png); */
-    background: black;
+    background: #202030;
 }
 
 #contact-section{
-    background:url(contactbg.png);
+    background: #202030;
 }
 
 .justify-text{
@@ -620,7 +627,6 @@ input[type="text"]:focus, input[type="email"]:focus{
 }
 
 .fa-brands{
-    background: black;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
@@ -648,7 +654,10 @@ input[type="text"]:focus, input[type="email"]:focus{
 }
 
 .img-card:hover{
-    box-shadow: 0px 0px 10px 0px #80808017;
+    /* background: #202030; */
+    border-color: olive;
+    box-shadow: 0px 0px 10px 0px olive;
+    transform: scale(1.01);
 }
 
 .overlay{
