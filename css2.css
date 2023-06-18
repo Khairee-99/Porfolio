@@ -8,6 +8,10 @@
     padding-right: 0px !important;
 }
 
+.ls{
+    letter-spacing: 5px;
+}
+
 /* Width */
 .w-15{
     width: 15%;
@@ -38,6 +42,10 @@
     font-size: 1.2vw;
 }
 
+.fs-11{
+    font-size: 14px;
+}
+
 .mt-5cst{
     margin-top: 3rem;
 }
@@ -62,6 +70,10 @@
     
     .fs-10{
         font-size: 2.8vw;
+    }
+
+    .fs-11{
+        font-size: 2.7vw;
     }
 
     .fa-3x{
@@ -123,12 +135,11 @@
     color: white;
 }
 .fc-2{
-    color:yellow;
+    color:#e2e2ff;
 }
 .fc-3{
     color: black;
 }
-
 .fc-4{
     color: rgb(210, 210, 210);
 }
@@ -145,6 +156,10 @@
 
 .bg-black{
     background: black;
+}
+
+.bg-3{
+    background: #202030;
 }
 
 /* Icons */
@@ -331,17 +346,13 @@ from {
     border-radius: 30px;
 }
 
-.connectbtn{
-}
-
-.explore-btn, .contactbtn, .experiencebtn, .connectbtn {
+.explore-btn, .contactbtn, .experiencebtn, .connectbtn, .resumebtn, .followbtn {
     width: fit-content;
     outline: none;
-    border: 1px solid yellow;
+    border: 1px solid #e2e2ff;
     padding: 10px 10px;
     transition: 200ms ease-in;
-    /* background: black; */
-    color: yellow;
+    color: #e2e2ff;
     text-decoration: none;
     cursor: pointer;
     position: relative;
@@ -349,7 +360,7 @@ from {
     z-index: 0;
 }
 
-.explore-btn::before, .contactbtn::before, .experiencebtn::before, .connectbtn::before{
+.explore-btn::before, .contactbtn::before, .experiencebtn::before, .connectbtn::before, .resumebtn::before, .followbtn::before{
     content: "";
     position: absolute;
     top: 0;
@@ -357,15 +368,15 @@ from {
     width: 0%;
     height: 100%;
     z-index: -1;
-    background: yellow;
+    background: #dbdbff;
     transition: 300ms ease-in-out;
 }
 
-.explore-btn:hover, .contactbtn:hover, .experiencebtn:hover, .connectbtn:hover{
+.explore-btn:hover, .contactbtn:hover, .experiencebtn:hover, .connectbtn:hover, .resumebtn:hover, .followbtn:hover{
     color: black;
 }
 
-.explore-btn:hover::before, .contactbtn:hover::before, .experiencebtn:hover::before, .connectbtn:hover::before{
+.explore-btn:hover::before, .contactbtn:hover::before, .experiencebtn:hover::before, .connectbtn:hover::before, .resumebtn:hover::before, .followbtn:hover::before{
     width: 100%;
 }
 
@@ -508,18 +519,13 @@ from {
 .progress{
     border-radius: 0px !important;
     height: 5px !important;
+    background: #202030;
 }
 
 .progress-bar{
-    border: 1px solid yellow !important;
-    background:yellow !important;
+    background:#9b9bd3 !important;
     transition: 200ms ease-in-out !important;
     border-radius:0px !important;
-}
-
-#contact-form{
-    background:grey;
-    opacity: 0.8;
 }
 
 #resume-wrap{
@@ -655,8 +661,8 @@ input[type="text"]:focus, input[type="email"]:focus{
 
 .img-card:hover{
     /* background: #202030; */
-    border-color: olive;
-    box-shadow: 0px 0px 10px 0px olive;
+    border-color: #202030;
+    box-shadow: 0px 0px 10px 0px #202030;
     transform: scale(1.01);
 }
 
@@ -694,4 +700,84 @@ input[type="text"]:focus, input[type="email"]:focus{
 .bateriku-link{
     text-decoration: none;
     color: white;
+}
+
+/* SOCIAL CARDS */
+
+.social-cards{
+    width: 500px !important;
+    height:fit-content;
+    padding: 0 0 !important;
+    transition: 300ms ease-in-out;
+    border-radius:15px 15px 15px 15px;
+}
+
+.social-cards:hover{
+    box-shadow: 0px 0px 10px 0px #202030;
+    transform: scale(1.01);
+}
+
+.upper-cards{
+    height: 50px;
+    width: 100%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(32,32,48,1) 100%);
+    border-radius:15px 15px 0px 0px;
+    position: relative;
+}
+
+.profile-pic{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #202030;
+    margin: 5px;
+    border-radius: 50%;
+    background-image: url(bestg.jpg);
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+
+.profile-picbg{
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 50%;
+    background: black;
+}
+
+.lower-cards{
+    width:100%;
+    height: fit-content;
+    border: 1px solid #202030;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.content-wrap{
+    height: fit-content;
+    width:100%;
+    border:1px solid #202030;
+    border-radius: 15px;
+}
+
+.myname{
+    letter-spacing: 1px;
+}
+
+.interest-card{
+    background: #2D2D44;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.followbtn{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 25px;
 }
