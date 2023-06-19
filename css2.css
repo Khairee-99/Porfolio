@@ -26,6 +26,22 @@
     width: 70%;
 }
 
+.h-10{
+    height: 10%;
+}
+
+.h-20{
+    height: 20%;
+}
+
+.h-70{
+    height: 70%;
+}
+
+.h-80{
+    height: 80%;
+}
+
 .fs-7{
     font-size: 5vw;
 }
@@ -48,6 +64,10 @@
 
 .mt-5cst{
     margin-top: 3rem;
+}
+
+.lh{
+    line-height: 18px;
 }
 
 @media (max-width: 768px) {
@@ -76,29 +96,13 @@
         font-size: 2.7vw;
     }
 
-    .fa-3x{
+    .fa-3x, .fa-2x{
         font-size: 5vw !important;
     }
 
 }
 
 @media (max-width: 576px) {
-    /* .fs-7 {
-        font-size: 1.6rem;
-    }
-    
-    .fs-8{
-        font-size: 1rem;
-    }
-    
-    .fs-9{
-        font-size: 0.8rem;
-    }
-    
-    .fs-10{
-        font-size: 0.7rem;
-    } */
-
     #about{
         color: white;
         padding: 10px 10px;
@@ -117,14 +121,43 @@
 @media (min-width: 375px ) and (max-width:767px){
     .knowme-col{
         padding:0px 0px 0px 0px !important;
-        /* border:1px solid #80808017;
-        border-radius: 15px !important; */
     }
     .skills-col{
         padding: 0px 0px !important;
     }
     .contactbtn{
         margin:30px 0px !important;
+    }
+    #contact-wrap{
+        align-items: start !important;
+    }
+    .lower-cards{
+        padding: 25px 5px 5px 5px !important;
+    }
+    .profile-pic{
+        left: 0px;
+        top: 0px;
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .profile-picbg{
+        position: absolute;
+        left: 30px !important;
+        top: 10px !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin: 5px;
+        border-radius: 50%;
+        background: black;
+    }
+    .formwrap{
+        height: fit-content !important;
+    }
+    .input-wrap{
+        padding: 5px 0px !important;
+    }
+    .h-20{
+        height: 10% !important;
     }
 }
 
@@ -141,12 +174,12 @@
     color: black;
 }
 .fc-4{
-    color: rgb(210, 210, 210);
+    color: #bfbfcc;
 }
 
 /* Border Color */
-.border-yellow{
-    border: 1px solid yellow;
+.border-light{
+    border: 1px solid #e2e2ff;
 }
 
 /* Background */
@@ -168,10 +201,6 @@ div.nav-wrapper a{
     color: white!important;
     justify-content: center;
     cursor: pointer;
-}
-
-.bg-cslight{
-    background: yellow;
 }
 
 .hover-border {
@@ -301,18 +330,7 @@ from {
 .knowme-col{
     padding: 0px 30px;
     color: white;
-    /* background: #1d1d1d31; */
-    border-radius: 15px 0px 0px 15px;
-    backdrop-filter: blur(15px);
-    opacity: 0.9;
     transition: 300ms ease-in;
-    /* box-shadow: 0px 0px 30px 0px #80808017; */
-}
-
-.skills-col{
-    border:1px transparent #80808017;
-    border-radius: 0px 15px 15px 0px;
-    /* box-shadow: 0px 0px 10px 0px #80808017; */
 }
 
 .intro{
@@ -331,7 +349,6 @@ from {
     position: absolute;
     top: 15%;
     left: 40%;
-    /* border: 1px solid yellow; */
     padding: 20px 20px;
     border-radius: 15px;
     transition: 300ms ease-in-out;
@@ -346,7 +363,11 @@ from {
     border-radius: 30px;
 }
 
-.explore-btn, .contactbtn, .experiencebtn, .connectbtn, .resumebtn, .followbtn {
+.messagebtn{
+    background: transparent;
+}
+
+.explore-btn, .contactbtn, .experiencebtn, .connectbtn, .resumebtn, .followbtn, .messagebtn {
     width: fit-content;
     outline: none;
     border: 1px solid #e2e2ff;
@@ -360,7 +381,7 @@ from {
     z-index: 0;
 }
 
-.explore-btn::before, .contactbtn::before, .experiencebtn::before, .connectbtn::before, .resumebtn::before, .followbtn::before{
+.explore-btn::before, .contactbtn::before, .experiencebtn::before, .connectbtn::before, .resumebtn::before, .followbtn::before, .messagebtn::before{
     content: "";
     position: absolute;
     top: 0;
@@ -372,11 +393,11 @@ from {
     transition: 300ms ease-in-out;
 }
 
-.explore-btn:hover, .contactbtn:hover, .experiencebtn:hover, .connectbtn:hover, .resumebtn:hover, .followbtn:hover{
+.explore-btn:hover, .contactbtn:hover, .experiencebtn:hover, .connectbtn:hover, .resumebtn:hover, .followbtn:hover, .messagebtn:hover{
     color: black;
 }
 
-.explore-btn:hover::before, .contactbtn:hover::before, .experiencebtn:hover::before, .connectbtn:hover::before, .resumebtn:hover::before, .followbtn:hover::before{
+.explore-btn:hover::before, .contactbtn:hover::before, .experiencebtn:hover::before, .connectbtn:hover::before, .resumebtn:hover::before, .followbtn:hover::before, .messagebtn:hover::before{
     width: 100%;
 }
 
@@ -545,11 +566,12 @@ from {
 input, textarea{
     background:transparent !important;
     border: 1px solid transparent;
-    border-bottom: 1px solid yellow !important;
+    border-bottom: 1px solid #9b9bd3 !important;
     width: 100%;
     color: white !important;
     padding: 5px;
     outline: none;
+    transition: 300ms ease-in-out;
     background-color: transparent !important;
 }
 
@@ -561,14 +583,11 @@ input:focus{
 }
 
 input[type="text"]:focus, input[type="email"]:focus{
-    background: rgb(31, 31, 31) !important;
+    box-shadow: 0px 0px 10px 0px #20203080;
 }
 
 
 .labels{
-    position: absolute;
-    top:6px;
-    left: 5px;
     width: 21%;
     transition: 500ms ease;
     padding: 0px 5px 0px 5px;
@@ -633,28 +652,17 @@ input[type="text"]:focus, input[type="email"]:focus{
 }
 
 .fa-brands{
+    transition: 300ms ease-in-out;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
 
-.tools-wrap > i:hover{
-    -webkit-text-stroke-color: yellow;
-}
-
-.skills-prog:hover > :nth-child(1){
-    -webkit-text-stroke-color: yellow;
-}
-
-.skills-prog:hover > :nth-child(2), .skills-prog:hover > :nth-child(3){
-    color: yellow;
-}
-
 .img-card{
+    width: 700px;
     position: relative;
     padding: 0px 0px !important;
-    /* box-shadow: 0px 0px 10px 0px #80808017; */
-    border:1px solid #80808017;
+    border:1px solid #202030;
     border-radius: 15px;
     transition: 300ms ease-in-out;
 }
@@ -705,16 +713,21 @@ input[type="text"]:focus, input[type="email"]:focus{
 /* SOCIAL CARDS */
 
 .social-cards{
-    width: 500px !important;
+    width: 700px !important;
     height:fit-content;
     padding: 0 0 !important;
     transition: 300ms ease-in-out;
     border-radius:15px 15px 15px 15px;
 }
 
-.social-cards:hover{
+.social-cards:hover, .formwrap:hover{
     box-shadow: 0px 0px 10px 0px #202030;
     transform: scale(1.01);
+}
+
+.social-cards:hover > .upper-cards > .d-flex, .social-cards:hover > .upper-cards > .d-flex > .fa-brands {
+    color:#e2e2ff;
+    transition: 300ms ease-in-out;
 }
 
 .upper-cards{
@@ -752,6 +765,7 @@ input[type="text"]:focus, input[type="email"]:focus{
 }
 
 .lower-cards{
+    padding: 40px 15px 15px 15px;
     width:100%;
     height: fit-content;
     border: 1px solid #202030;
@@ -770,9 +784,12 @@ input[type="text"]:focus, input[type="email"]:focus{
 }
 
 .interest-card{
+    display: flex;
     background: #2D2D44;
     padding: 2px 5px;
     border-radius: 10px;
+    text-align: center;
+    align-items: center;
 }
 
 .followbtn{
@@ -780,4 +797,25 @@ input[type="text"]:focus, input[type="email"]:focus{
     display: inline-block;
     margin-top: 10px;
     border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.formwrap{
+    height: 450px;
+    width: 700px !important; 
+    padding: 15px 15px;
+    border-radius: 15px;
+    border: 1px solid #202030;
+    transition: 300ms ease-in-out;
+}
+
+#resume-title{
+    background: #2D2D44;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.input-wrap{
+    padding: 20px 0px;
 }
