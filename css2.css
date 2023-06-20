@@ -174,7 +174,7 @@
     color: black;
 }
 .fc-4{
-    color: #bfbfcc;
+    color: #cecee9;
 }
 
 /* Border Color */
@@ -272,23 +272,6 @@ from {
     background: yellow;
 }
 
-.img-bg{
-    /* background-image: url(grey.jpg); */
-    background: url(bestg.webp);
-    background-size:50vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 500ms ease-in-out;
-}
-
-.img-bg:hover{
-    
-    background-image: url(bestg.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .clickable{
     cursor: pointer;
 }
@@ -336,7 +319,7 @@ from {
 
 .intro{
     background-color: #202030;
-    background:url(bestg.webp);
+    background:url(Image/bestg.webp);
     background-size:contain;
     background-repeat: no-repeat;
     background-position: top left;
@@ -436,7 +419,6 @@ from {
 .intro, #biodata-section, #experience-section, #contact-section{
     height: 100vh !important;
     align-items: center;
-    /* justify-content: center; */
     scroll-snap-align: start;
 }
 
@@ -449,7 +431,6 @@ from {
 }
 
 #biodata-section{
-    /* background: url(grey.png); */
     background: #202030;
 }
 
@@ -748,7 +729,7 @@ input[type="text"]:focus, input[type="email"]:focus{
     border: 1px solid #202030;
     margin: 5px;
     border-radius: 50%;
-    background-image: url(bestg.jpg);
+    background-image: url(Image/bestg.jpg);
     background-size: cover;
     background-color: black;
     background-repeat: no-repeat;
